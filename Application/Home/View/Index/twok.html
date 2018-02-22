@@ -1,0 +1,160 @@
+<html>
+<head>
+  <title>抽奖页面</title>
+  <link rel="stylesheet" href="__STATIC__/css/reset.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+  </head>
+<style type="text/css">
+  body{
+    background:#cb0605;
+    text-align: center
+  }
+  .bkg{
+    width:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index:-1;
+  }
+  .jiangbox{
+    width:80%;
+    background: url('__STATIC__/img/cir.png') no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-wrap:wrap;
+    margin: 0 auto;
+    padding:13px;
+    margin-top:45%;
+    box-sizing:border-box;
+  }
+
+     a{
+    display: block;
+    color:#fff;
+    font-size:12px;
+    text-decoration: none;
+    margin-top:8px;
+    text-align: center
+  }
+  .btn{
+      background: url('__STATIC__/img/btn.png');
+    background-size: 100% 100%;
+    width:10rem;
+    height:2.2rem;
+    font-size:18px;
+    margin:0 auto;
+    line-height: 2.2rem;
+    margin-top:15px;  
+  }
+  .jdlink{
+    /*border-bottom:2px solid #fff;*/
+    color:#eae3a0;
+    line-height: 18px;
+    width:100%;
+    margin:0 auto;
+    margin-top:10px;
+  }
+  .jdlinkbig{
+    font-size:20px;
+    text-align: left;
+    line-height: 20px
+  }
+  .jdlinkcenter{
+    text-align: left;
+  }
+  .bottom{
+    position: relative;
+  }
+  .item.start{
+    background: url('__STATIC__/img/start.png') no-repeat;
+    background-size: cover;
+  }
+    .textdesc{
+    color:#fff;
+    text-align: center;
+    font-size: 12px;
+    margin-top:55%;
+    line-height: 10px;
+    margin-bottom:10px;
+  }
+  .imgbox{
+    width:90%;
+    margin:0 auto;
+    position: relative;
+    display: flex;
+    justify-content:flex-end;
+    flex-direction:column;
+    height:150px;
+  }
+  .jiangpicbox{
+    width:130px;
+    height:160px;
+    background: url('__STATIC__/img/2b.png') ;
+    background-size: 100% 100%;
+    position: absolute;
+    right:40px;
+    z-index:-1;
+  }
+  .textwrap{
+    margin-top:45%;
+  }
+  .textbox{
+    border:1px solid #fff;
+    color:#fff;
+    border-radius: 10px;
+    font-size:12px;
+    width:90%;
+    margin:0 auto;
+    text-align: left;
+    padding:10px;
+    box-sizing:border-box;
+    line-height: 16px;
+    margin-top:20px;
+  }
+  .thename{
+    font-size:10px;
+    color:#eae3a0;
+    text-align: left;
+    margin-top:80px;
+    margin-left:10px;
+  }
+  .number{
+    color:#eae3a0;
+    font-size:14px;
+    text-align: left;
+    margin-left:10px;
+    font-weight: bold;
+    line-height: 16px;
+    margin-top:5px;
+  }
+  .wait{
+    margin-top:15%;
+  }
+</style>
+<body>
+  <img src="__STATIC__/img/bkg2.png" class="bkg">
+  <!-- <p class="textdesc">代金券在宏碁电脑京东指定店铺使用</p> -->
+  <!-- <img src="./img/onek.png" width="80%"> -->
+  <div class="textwrap">
+   <!-- <a class="jdlink" href="">恭喜您获得</a> -->
+   <!-- <a class="jdlink jdlinkbig" href="">蜂鸟Swft5代金券1000元一张</a> -->
+   <div class="imgbox">
+     <div class="jiangpicbox">
+      <p class="thename">幸运编码:</p>
+      <p class="number">{$data.voucher}</p>
+     </div>
+     <a class="jdlink jdlinkcenter" href="">恭喜您获得</a>
+     <a class="jdlink jdlinkbig" href="">宏碁蜂鸟Swft5购机红包2000元1张</a>
+     <a class="jdlink jdlinkbig" href=""> </a>
+   </div>
+   <p class="textbox">
+    请于3月15日前在【Acer宏碁官方】微信公众号的对话框发送中奖截图，并发送[幸运大转盘+姓名+联系方式]，工作人员会根据收到的信息联系中奖者；
+中奖者在购买指定机型（Swift5 SF514-52T）产品后，将【订单号+机器编码】提供给工作人员，作为获取购机红包凭证。
+   </p>
+   <a class="jdlink wait" href="">还等什么？现在就去京东下单！</a>
+   <a class="btn" href="https://sale.jd.com/m/act/XrgJcNSGkwYyz.html" target="_parent">快去京东逛逛</a>
+</div>
+</body>
+</html>

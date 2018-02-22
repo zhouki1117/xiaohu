@@ -1,0 +1,165 @@
+<html>
+<head>
+	<title>抽奖页面</title>
+	<link rel="stylesheet" href="__STATIC__/css/reset.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+  </head>
+<style type="text/css">
+  body{
+    background:#cb0605;
+    text-align: center
+  }
+  .bkg{
+    width:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index:-1;
+  }
+  .item{
+    width:33.33%;
+    border:4px solid red;
+    background: #fceeee;
+    box-sizing:border-box;
+    border-radius: 10%;
+    font-size:16px;
+    position: relative;
+    color:red;
+    }
+  .item:before {
+    content:"";
+    display: inline-block;
+    padding-bottom: 100%;
+    width: .1px;
+    vertical-align: middle;
+  }
+  .item .inner{
+    position: absolute;
+    height:100%;
+    left:0;
+    top:0;
+    width:100%;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-around;
+    padding-top:5px 0;
+  }
+  .item img{
+    width:90%;
+  }
+  .item.nm img{
+    width:50%;
+  }
+  img.item{
+    width:33.33%;
+    border:none;
+  }
+     a{
+    display: block;
+    color:#fff;
+    font-size:14px;
+    text-decoration: none;
+    margin-top:10%;
+    text-align: center
+  }
+  .btn{
+    background: url('__STATIC__/img/btn.png');
+    background-size: 100% 100%;
+    width:10rem;
+    height:2.2rem;
+    font-size:18px;
+    margin:0 auto;
+    line-height: 2.2rem;
+    margin-top:10%;
+    color:#fff;
+    border:0;
+    outline:0;
+  }
+  .jdlink{
+    border-bottom:1px solid #eae3a0;
+    color:#eae3a0;
+    line-height: 18px;
+    width:50px;
+    margin:0 auto;
+    margin-top:15px;
+  }
+  .jdlinkbig{
+    font-size:20px;
+  }
+  .bottom{
+    position: relative;
+  }
+  .item.start{
+    background: url('__STATIC__/img/start.png') no-repeat;
+    background-size: cover;
+  }
+  .detail{
+    margin-top:100%;
+  }
+    .textdesc{
+    color:#fff;
+    text-align: center;
+    font-size: 12px;
+    margin-top:70px;
+    line-height: 10px;
+    margin-bottom:10px;
+  }
+  .inputbox{
+    display: flex;
+    margin:5px 0;
+    align-items:center;
+    font-size:12px;
+    justify-content:center;
+    text-align: left;
+    color:#fff;
+  }
+  .inputbox .inner{
+    width:200px;
+    padding:0 5px;
+    line-height: 14px
+  }
+  .inputbox .name{
+    display: block;
+    width:70px;
+    text-align: justify;
+    color:#fff;
+  }
+  .coms{
+    width:75%;
+  }
+  .title{
+    font-size:20px;
+    font-weight: bold;
+    color:#ece6a3;
+    line-height: 25px;
+    margin-top:10px;
+  }
+  .subtitle{
+    font-size:14px;
+    color:#ece6a3;
+    margin-top:10px;
+  }
+  .address{
+    border:1px solid #fff;
+    width:80%;
+    margin: 0 auto;
+    padding:0 10px;
+    border-radius: 5px;
+    margin-top:10px;
+  }
+</style>
+<body>
+  <img src="__STATIC__/img/da.png" class="bkg">
+  <div class="detail">
+    <p class="subtitle">恭喜你获得</p>
+    <p class="title">蜂鸟Swift5轻奢触控笔记本1台</p>
+    <p class="subtitle">礼物已经打包好，就等您的收货地址了</p>	<div class="textwrap">
+   <a href="{:U('index/address')}" class="btn">填写收货地址</a>
+   <a class="jdlink" href=" https://sale.jd.com/m/act/XrgJcNSGkwYyz.html " target="_parent">逛京东</a>
+</div>
+  </div>
+</body>
+</html>

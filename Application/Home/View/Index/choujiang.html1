@@ -1,0 +1,187 @@
+<html>
+<head>
+	<title>抽奖页面</title>
+	<link rel="stylesheet" href="__STATIC__/css/reset.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+  </head>
+<style type="text/css">
+  body{
+    background:#bb281c
+  }
+  .bkg{
+    width:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index:-1;
+  }
+  .jiangbox{
+    width:80%;
+    background: url('__STATIC__/img/cir.png') no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-wrap:wrap;
+    margin: 0 auto;
+    padding:13px;
+    margin-top:45%;
+    box-sizing:border-box;
+  }
+  .item{
+    width:33.33%;
+    border:4px solid red;
+    background: #fceeee;
+    box-sizing:border-box;
+    border-radius: 10%;
+    font-size:16px;
+    position: relative;
+    color:red;
+    }
+  .item:before {
+    content:"";
+    display: inline-block;
+    padding-bottom: 100%;
+    width: .1px;
+    vertical-align: middle;
+  }
+  .item .inner{
+    position: absolute;
+    height:100%;
+    left:0;
+    top:0;
+    width:100%;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-around;
+    padding-top:5px 0;
+  }
+  .item img{
+    width:90%;
+  }
+  .item.nm img{
+    width:50%;
+  }
+  img.item{
+    width:33.33%;
+    border:none;
+  }
+     a{
+    display: block;
+    color:#fff;
+    font-size:12px;
+    text-decoration: none;
+    margin-top:12px;
+    text-align: center
+  }
+  .btn{
+    background: url('__STATIC__/img/btn.png');
+    background-size: 100% 100%;
+    width:120px;
+    height:30px;
+    margin:0 auto;
+    line-height: 30px;
+    margin-top:15px;
+  }
+  .jdlink{
+    /*border-bottom:2px solid #fff;*/
+    color:#eae3a0;
+    line-height: 18px;
+    width:100%;
+    margin:0 auto;
+    margin-top:15px;
+  }
+  .bottom{
+    position: relative;
+  }
+  .item.start{
+    background: url('__STATIC__/img/start.png') no-repeat;
+    background-size: cover;
+  }
+</style>
+<body>
+  <img src="__STATIC__/img/bkg2.png" class="bkg">
+	<div class="jiangbox">
+  <div class="item">
+    <div class="inner">
+   <img src="__STATIC__/img/2b.png">
+   <span>三等奖</span>
+   </div>
+  </div>
+<div class="item nm">
+    <div class="inner">
+   <img src="__STATIC__/img/nm.png" width="70%">
+   <span>感谢参与</span>
+   </div>
+  </div>
+  <div class="item">
+    <div class="inner">
+   <img src="__STATIC__/img/onek.png">
+   <span>二等奖</span>
+   </div>
+  </div>
+  <div class="item">
+    <div class="inner">
+   <img src="__STATIC__/img/onek.png">
+   <span>二等奖</span>
+   </div>
+  </div>
+    <!-- <img class="item" src="./img/start.png"></img> -->
+  <div class="item start">
+   
+  </div>
+  <div class="item">
+    <div class="inner">
+   <img src="__STATIC__/img/2b.png">
+   <span>三等奖</span>
+   </div>
+  </div>
+
+  <div class="item">
+    <div class="inner">
+   <img src="__STATIC__/img/com.png">
+   <span>一等奖</span>
+   </div>
+  </div>
+  <div class="item nm">
+    <div class="inner">
+   <img src="__STATIC__/img/nm.png">
+   <span>感谢参与</span>
+   </div>
+  </div>
+  <div class="item">
+    <div class="inner">
+   <img src="__STATIC__/img/com.png">
+   <span>一等奖</span>
+   </div>
+  </div>
+  </div>
+  <div class="textwrap">
+   <a class="jdlink" href="javascript:;">每个ID只有一次抽奖机会</a>
+   <a class="btn" href="index.html">快去京东逛逛</a>
+</div>
+  <script type="text/javascript" src="__STATIC__/js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="__STATIC__/js/layer/layer.js"></script>
+  <script>
+    var url = "{:U('index/lottery')}";
+    $(".start").click(function(){
+        $.ajax( {
+            url: url,// 跳转到 action
+            type:'post',
+            dataType:'json',
+            success:function(data) {
+                if(data.code) {
+                    layer.msg(data.msg, {icon: 5});
+                } else {
+                    window.location.href = "http://hongqichoujiang.xteknology.com/index/complete?id="+data.data.id+"&voucher="+data.data.voucher;
+                }
+            },
+            error : function() {
+                layer.msg('网络异常，请稍后重试！', {icon: 5});
+            }
+        });
+    });
+</script>
+</body>
+</html>

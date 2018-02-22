@@ -1,0 +1,153 @@
+<html>
+<head>
+  <title>抽奖页面</title>
+  <link rel="stylesheet" href="__STATIC__/css/reset.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  </head>
+<style type="text/css">
+  body{
+    background:#cb0605;
+    text-align: center
+  }
+  .bkg{
+    width:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index:-1;
+  }
+  .item{
+    width:33.33%;
+    border:4px solid red;
+    background: #fceeee;
+    box-sizing:border-box;
+    border-radius: 10%;
+    font-size:16px;
+    position: relative;
+    color:red;
+    }
+  .item:before {
+    content:"";
+    display: inline-block;
+    padding-bottom: 100%;
+    width: .1px;
+    vertical-align: middle;
+  }
+  .item .inner{
+    position: absolute;
+    height:100%;
+    left:0;
+    top:0;
+    width:100%;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-around;
+    padding-top:5px 0;
+  }
+  .item img{
+    width:90%;
+  }
+  .item.nm img{
+    width:50%;
+  }
+  img.item{
+    width:33.33%;
+    border:none;
+  }
+     a{
+    display: block;
+    color:#fff;
+    font-size:12px;
+    text-decoration: none;
+    margin-top:12px;
+    text-align: center
+  }
+  .btn{
+    background: url('__STATIC__/img/btn.png');
+    background-size: 100% 100%;
+    width:10rem;
+    height:2.2rem;
+    font-size:18px;
+    margin:0 auto;
+    line-height: 2.2rem;
+    color:#fff;
+    border:0;
+    outline:0;
+  }
+  .jdlink{
+    /*border-bottom:2px solid #fff;*/
+    color:#eae3a0;
+    line-height: 18px;
+    width:100%;
+    margin:0 auto;
+    margin-top:15px;
+  }
+  .jdlinkbig{
+    font-size:20px;
+  }
+  .bottom{
+    position: relative;
+  }
+  .item.start{
+    background: url('__STATIC__/img/start.png') no-repeat;
+    background-size: cover;
+  }
+  form{
+    margin-top:58%;
+  }
+    .textdesc{
+    color:#fff;
+    text-align: center;
+    font-size: 12px;
+    margin-top:40%;
+    line-height: 10px;
+    margin-bottom:5%;
+  }
+  .inputbox{
+    display: flex;
+    margin-top:20px;
+    align-items:center;
+    font-size:16px;
+    justify-content:center;
+    text-align: left;
+    color:#fff;
+  }
+  .inputbox .inner{
+    width:200px;
+    padding:0 5px;
+    line-height: 16px
+  }
+  .inputbox .name{
+    display: block;
+    width:80px;
+    text-align: justify;
+    color:#fff;
+  }
+</style>
+<body>
+  <img src="__STATIC__/img/bkg2.png" class="bkg">
+  <form action="{:U('index/com_confirm')}" method="post">
+    <div class="inputbox">
+ <span class="name">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名:</span>
+ <p class="inner">{$data.name}</p>
+        <input name="name" type="hidden" value="{$data.name}">
+    </div>
+    <div class="inputbox">
+ <span class="name">手&nbsp;&nbsp;机&nbsp;&nbsp;号:</span>
+ <p class="inner">{$data.phone}</p>
+        <input name="phone" type="hidden" value="{$data.phone}">
+    </div>
+    <div class="inputbox">
+ <span class="name">收货地址&nbsp;:</span>
+ <p class="inner">{$data.add}</p>
+        <input name="add" type="hidden" value="{$data.add}">
+    </div>
+	<div class="textwrap">
+  <p class="textdesc">再次核实输入信息，确认后不得修改！</p>
+   <input type="submit" class="btn" value="确认" />
+</div>
+  </form>
+</body>
+</html>

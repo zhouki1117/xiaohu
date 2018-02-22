@@ -1,0 +1,315 @@
+<html>
+<head>
+  <title>首页</title>
+  <link rel="stylesheet" href="__STATIC__/css/reset.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <script src="__STATIC__/js/jquery-3.3.1.min.js" type="text/javascript"></script>
+</head>
+<style type="text/css">
+  body{
+    background: #cb0605
+  }
+  .top{
+    width:100%;
+  }
+  .questionswrap{
+    width:100%;
+    padding:20px;
+    box-sizing:border-box;
+  }
+  .questions{
+    border:2px solid #EBE497;
+    padding:10px;
+    box-sizing:border-box;
+  }
+  .questioninner{
+    background: #EBE497;
+    padding:10px 5px;
+  }
+  .qstitem{
+    margin-top:20px;
+  }
+ .title{
+  font-size:14px;
+  color:#CA0705;
+  line-height: 16px
+ }
+ .answrap{
+  width:100%;
+  padding:10px;
+    box-sizing:border-box;
+ }
+ .ansitem{
+  background: #fff;
+  width:100%;
+  border:1px solid red;
+font-size:12px;
+color:rgba(152,152,152,1);
+line-height:16px;
+padding:10px 10px;
+    box-sizing:border-box;
+    display: flex;
+    align-items:center;
+    border-radius: 2px ;
+    margin-top:10px;
+ }
+ .dot{
+  display: inline-block;
+  width:10px;
+  height:10px;
+  background: #fff;
+  border: 2px solid rgba(152,152,152,1);
+  border-radius: 50%;
+  margin-right:10px;
+ }
+ .ansitemactive .dot{
+  background: red;
+  border-color:red;
+  color:red;
+ }
+ .ansitemactive .ans{
+  color:red;
+ }
+ .ans{
+  flex:1;
+ }
+   a{
+    display: block;
+    color:#fff;
+    font-size:12px;
+    text-decoration: none;
+    margin-top:12px;
+    text-align: center
+  }
+  .btn{
+      background: url('__STATIC__/img/btn.png');
+    background-size: 100% 100%;
+    width:10rem;
+    height:2.2rem;
+    font-size:18px;
+    margin:0 auto;
+    line-height: 2.2rem;
+    margin-top:10%;
+    color:#fff;
+
+  }
+  .jdlink{
+    border-bottom:1px solid #eae3a0;
+    color:#eae3a0;
+    line-height: 18px;
+    width:40px;
+    margin:0 auto;
+    margin-top:15px;
+  }
+  .bottom{
+    position: relative;
+  }
+  .textwrap{
+    position: absolute;
+    width:100%;
+    left:0;
+    top:0;
+  }
+    /*弹窗样式*/
+  .mask{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:rgba(0,0,0,0.5);
+    display: none
+  }
+  .laybox{
+    width:76%;
+    background:#fff;
+    border-radius: 5px;
+    color:#323232;
+    text-align: center;
+    padding:20px 10px;
+    box-sizing:border-box;
+    margin:0 auto;
+    margin-top:50%;
+  }
+  .laybox a{
+    display: inline-block;
+    background:#bb281c;
+    color:#fff;
+    width:100px;
+    height:35px;
+    line-height: 35px;
+    font-size:14px;
+    font-weight: bold;
+    border-radius: 5px;
+    outline: 0;
+    border:0;
+    margin-top:20px;
+  }
+  .info{
+    font-size:14px;
+    line-height: 24px
+  }
+  /*弹窗样式*/
+</style>
+<body>
+  <!-- 顶部图片  -->
+<img class="top" src="__STATIC__/img/top.jpg"></img>
+<!-- 问题内容 -->
+<div class="questionswrap">
+   <div class="questions">
+     <div class="questioninner">
+      <!-- 第一个问题 -->
+      <div class="qstitem">
+          <p class="title">
+           1、 宏碁蜂鸟Swift5轻奢触控本体重是多少？如何保持轻盈“身材”？
+          </p> 
+      <div class="answrap">
+          <div class="ansitem rightitem">
+            <span class="dot dotactive"></span>
+            <span class="ans">
+            A: 机身970克，【镁锂合金】轻到不行 
+            </span>
+          </div>
+          <div class="ansitem wrongitem">
+            <span class="dot"></span>
+            <span class="ans">
+            B: 机身3公斤，铝合金一样轻 
+            </span>
+          </div>
+      </div>
+      </div>
+      <!-- 第二个问题 -->
+      <div class="qstitem">
+          <p class="title">
+           2、 蜂鸟Swift5粉丝的街头暗号是什么？
+          </p> 
+      <div class="answrap">
+          <div class="ansitem rightitem">
+            <span class="dot dotactive"></span>
+            <span class="ans">
+            A: 我有【暮光蓝】知己，也有【蜜糖金】姐妹 
+            </span>
+          </div>
+          <div class="ansitem wrongitem">
+            <span class="dot"></span>
+            <span class="ans">
+            B: 深孔灰加持，海水蓝傍身
+            </span>
+          </div>
+      </div>
+      </div>
+      <!-- 第三个问题 -->
+      <div class="qstitem">
+          <p class="title">
+           3、 为什么说蜂鸟Swift5是潮流新ICON？
+          </p> 
+      <div class="answrap">
+          <div class="ansitem rightitem">
+            <span class="dot dotactive"></span>
+            <span class="ans">
+            A: 炫薄触控本，就要你好看 
+            </span>
+          </div>
+          <div class="ansitem wrongitem">
+            <span class="dot"></span>
+            <span class="ans">
+            B: 超薄商务本，成就非凡
+            </span>
+          </div>
+      </div>
+      </div>
+      <!-- 第四个问题 -->
+      <div class="qstitem">
+          <p class="title">
+           4、 蜂鸟Swift5内外兼修，什么功能更出众？
+          </p> 
+      <div class="answrap">
+          <div class="ansitem wrongitem">
+            <span class="dot dotactive"></span>
+            <span class="ans">
+            A: 屏幕保护，睡眠模式
+            </span>
+          </div>
+          <div class="ansitem rightitem">
+            <span class="dot"></span>
+            <span class="ans">
+            B: 指纹识别，微软加持，一秒安全开启 
+            </span>
+          </div>
+      </div>
+      </div>
+      <!-- 第五个问题 -->
+      <div class="qstitem">
+          <p class="title">
+           5、 接红包，抽大奖，宏基中国和蜂鸟Swift5恭祝各位：
+          </p> 
+      <div class="answrap">
+          <div class="ansitem wrongitem">
+            <span class="dot dotactive"></span>
+            <span class="ans">
+            A: 狗年行大运！
+            </span>
+          </div>
+          <div class="ansitem rightitem">
+            <span class="dot"></span>
+            <span class="ans">
+            B: 轻奢蜂鸟5，展翅发宏财
+            </span>
+          </div>
+      </div>
+      </div>
+     </div>
+   </div>
+</div>
+<div class="bottom">
+<img class="top" src="__STATIC__/img/bottom.jpg"></img>
+<div class="textwrap">
+   <a class="btn go" href="javascript:;">去抽奖</a>
+   <a class="jdlink" href=" https://sale.jd.com/m/act/XrgJcNSGkwYyz.html " target="_parent">逛京东</a>
+</div>
+</div>
+<!-- 弹窗dom -->
+<div class="mask">
+  <div class="laybox">
+    <p class="info">
+      回答错误或回答不完整，请重新回答
+    </p>
+    <a class="reset" href="javascript:;">确 定</a>
+  </div>
+</div>
+<!-- 弹窗dom -->
+</body>
+<script type="text/javascript">
+  window.onload = function(){
+     var rightnum = 0 
+     $('.rightitem').click(function(){
+      $(this).addClass('ansitemactive').siblings().removeClass('ansitemactive')
+     })
+     $('.wrongitem').click(function(){
+      $(this).addClass('ansitemactive').siblings().removeClass('ansitemactive')
+     })
+     $('.go').click(function(){
+      // console.log($('.ansitemactive'))
+      var rightnum = 0
+      for(var i=0;i<=$('.ansitemactive').length;i++){
+          if($('.ansitemactive').eq(i).hasClass('rightitem')){
+            rightnum+=1
+          }
+      }
+      if(rightnum==5){
+        window.location.href = 'http://hongqichoujiang.xteknology.com/index.php/index/choujiang.html'
+        
+      }else{
+          $('.mask').show()
+      }
+      
+     })
+     $('.reset').click(function(){
+      $('.mask').hide()
+     })
+
+  }
+
+</script>
+</html>
